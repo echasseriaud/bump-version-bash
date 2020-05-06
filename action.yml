@@ -1,0 +1,19 @@
+name: 'Bump Version with Bash'
+inputs:
+  PATH:  
+    description: 'path of VERSION file'
+    required: true
+    default: './second/VERSION'
+  STEP:  
+    description: 'STEP to contruct VERSION'
+    required: true
+    default: 'patch'
+outputs:
+  value: 
+    description: 'value of new VERSION'
+runs:
+  using: 'shell'
+  image: 'main.sh'
+  args:
+    - ${{ inputs.PATH }}
+    - ${{ inputs.STEP }}
