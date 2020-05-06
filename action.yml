@@ -14,6 +14,3 @@ outputs:
 runs:
   using: 'node12'
   main: "main.js"
-  args:
-    - ${{ inputs.PATH }}
-    - ${{ inputs.STEP }}
