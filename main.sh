@@ -49,4 +49,4 @@ main() {
   echo ::set-output name=value::"$MAJOR.$MINOR.$PATCH"
 }
 
-main "$1" "$2"
+main ${INPUT_PATH} ${INPUT_STEP}

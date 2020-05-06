@@ -12,8 +12,8 @@ outputs:
   value: 
     description: 'value of new VERSION'
 runs:
-  using: 'shell'
-  image: 'main.sh'
+  using: 'node12'
+  image: 'main.js'
   args:
     - ${{ inputs.PATH }}
     - ${{ inputs.STEP }}
