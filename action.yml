@@ -3,7 +3,7 @@ inputs:
   PATH:  
     description: 'path of VERSION file'
     required: true
-    default: './second/VERSION'
+    default: './VERSION'
   STEP:  
     description: 'STEP to contruct VERSION'
     required: true
@@ -13,7 +13,7 @@ outputs:
     description: 'value of new VERSION'
 runs:
   using: 'node12'
-  image: 'main.js'
+  main: "main.js"
   args:
     - ${{ inputs.PATH }}
     - ${{ inputs.STEP }}
